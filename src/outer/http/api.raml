@@ -1,0 +1,19 @@
+#%RAML 1.0
+---
+title: Typescript Node Clean Architecture Boilpriate
+baseUri: http://example.com/api
+
+uses:
+  types: api_types.raml
+
+/blogs:
+  post:
+    body:
+      application/json:
+        type: types.Blog
+
+/blogs/{blogId}:
+  uriParameters:
+    blogId:
+      type: integer
+  get:
